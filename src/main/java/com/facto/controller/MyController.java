@@ -36,4 +36,5 @@ public class MyController {
         model.addAttribute("sysUser", "SysUser");
         return "sysUser";
     }
+
 }
