@@ -1,6 +1,8 @@
 package com.facto.service.impl;
 
+import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.file.FileReader;
+import cn.hutool.core.lang.Console;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.facto.mapper.UserMapper;
 import com.facto.service.IMyService;
@@ -21,20 +23,20 @@ public class MyService implements IMyService  {
 
     @Override
     public String Hello() {
+
+        FileUtil.getName("\\db");
+        List<String> strings = FileUtil.listFileNames(".\\db");
         String text=null;
-        File file = new File(".\\db");	//fixme	//获取其file对象
-        File[] fs = file.listFiles();	//遍历path下的文件和目录，放在File数组中
-        for(File f:fs){					//遍历File[]数组
-            if(!f.isDirectory());		//若非目录(即文件)
-            //读取输入流
-            FileReader fileReader=new FileReader(f.getPath());
+        for (String string : strings) {
+            FileReader fileReader=new FileReader(".\\db\\"+string);
             // 获取sql脚本初始化数据库
-             text += fileReader.readLines()
+            text += fileReader.readLines()
                     .stream()
-                    .map(string -> "<br>" + string + "<br/>")
+                    .map(str -> "<br>" + str + "<br/>")
                     .collect(Collectors.joining());
             //读取输入流
         }
+
 
 
         return "数据库初始化\n"+text;
