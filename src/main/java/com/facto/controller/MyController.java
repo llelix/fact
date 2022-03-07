@@ -28,6 +28,7 @@ public class MyController {
     public ResponseEntity Hello(){
         return ResponseEntity.ok(myService.getUsers());
     }
+
     @GetMapping("sysUser")
     public String user(Model model){
         List<User> list = myService.getUsers();
