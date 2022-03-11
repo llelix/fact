@@ -24,12 +24,16 @@ public class MyController {
 
         return ResponseEntity.ok(myService.Hello());
     }
+    @GetMapping("/index")
+    public String Main(){
+        return "index";
+    }
     @GetMapping("/user")
     public ResponseEntity Hello(){
         return ResponseEntity.ok(myService.getUsers());
     }
 
-    @GetMapping("sysUser")
+    @GetMapping("/sysUser")
     public String user(Model model){
         List<User> list = myService.getUsers();
         model.addAttribute("userList", list);

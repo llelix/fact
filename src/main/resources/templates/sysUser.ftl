@@ -11,7 +11,7 @@
 <body>
 <div class="container">
     <table class="table">
-        <caption>${sysUser}</caption>
+        <caption>${user}</caption>
         <thead>
         <tr>
             <th>First Name</th>

@@ -47,7 +47,6 @@ public class MyService implements IMyService  {
     @Override
     public List getUsers() {
         QueryWrapper queryWrapper=new QueryWrapper();
-
         List<User> users = userMapper.selectList(queryWrapper);
         return users;
     }
