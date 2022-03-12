@@ -2,6 +2,8 @@ package com.facto.controller;
 
 
 import com.facto.service.IMyService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +12,7 @@ import com.facto.vo.User;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Api(tags= "hello")
 @RestController("/api/v1")
 public class MyController {
     private final IMyService myService;
@@ -28,17 +30,18 @@ public class MyController {
     public String Main(){
         return "index";
     }
+    @ApiOperation("用户")
     @GetMapping("/user")
     public ResponseEntity Hello(){
         return ResponseEntity.ok(myService.getUsers());
     }
 
-    @GetMapping("/sysUser")
+    @GetMapping("/sysuser")
     public String user(Model model){
         List<User> list = myService.getUsers();
         model.addAttribute("userList", list);
         model.addAttribute("sysUser", "SysUser");
-        return "sysUser";
+        return "sysuser";
     }
 
 }
