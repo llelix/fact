@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.facto.vo.User;
 
@@ -35,7 +36,12 @@ public class MyController {
     public ResponseEntity Hello(){
         return ResponseEntity.ok(myService.getUsers());
     }
-
+    @ApiOperation("insert")
+    @PostMapping("/user")
+    public ResponseEntity insertUser(){
+        myService.insertUser();
+        return ResponseEntity.ok(myService.getUsers());
+    }
     @GetMapping("/sysuser")
     public String user(Model model){
         List<User> list = myService.getUsers();
@@ -43,5 +49,6 @@ public class MyController {
         model.addAttribute("sysUser", "SysUser");
         return "sysuser";
     }
+
 
 }

@@ -7,4 +7,5 @@ import java.util.List;
 public abstract interface IMyService {
      String Hello();
      List getUsers();
+     int insertUser();
 }
