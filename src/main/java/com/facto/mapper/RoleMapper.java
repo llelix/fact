@@ -1,7 +1,7 @@
 package com.facto.mapper;
 
 
-import com.facto.vo.Role;
+import com.facto.entity.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

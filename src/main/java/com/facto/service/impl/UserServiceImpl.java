@@ -3,7 +3,7 @@ package com.facto.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.facto.mapper.UserMapper;
 import com.facto.service.UserService;
-import com.facto.vo.User;
+import com.facto.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,4 +1,4 @@
-package com.facto.vo;
+package com.facto.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

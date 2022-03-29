@@ -2,14 +2,10 @@ package com.facto.service.impl;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.file.FileReader;
-import cn.hutool.core.lang.Console;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.facto.mapper.UserMapper;
 import com.facto.service.IMyService;
-import com.facto.vo.User;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.util.List;
 import java.util.stream.Collectors;
 

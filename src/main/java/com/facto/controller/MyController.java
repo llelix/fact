@@ -3,21 +3,17 @@ package com.facto.controller;
 
 import com.facto.service.IMyService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.facto.vo.User;
+import com.facto.entity.User;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+
 @Api(tags= "hello")
 @RestController("/api/v1")
 public class MyController {

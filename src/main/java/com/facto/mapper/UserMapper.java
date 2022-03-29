@@ -1,11 +1,8 @@
 package com.facto.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.facto.vo.User;
-import org.apache.ibatis.annotations.Select;
+import com.facto.entity.User;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface UserMapper extends BaseMapper<User> {
