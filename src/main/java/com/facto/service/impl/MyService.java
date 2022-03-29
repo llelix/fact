@@ -42,16 +42,5 @@ public class MyService implements IMyService  {
         return "数据库初始化\n"+text;
     }
 
-    @Override
-    public List getUsers() {
-        QueryWrapper queryWrapper=new QueryWrapper();
-        List<User> users = userMapper.selectList(queryWrapper);
-        return users;
-    }
-
-    @Override
-    public int insertUser() {
-        return userMapper.insert(new User(null,"lee",18,"123@emailbox"));
-    }
 
 }
