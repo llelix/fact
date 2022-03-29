@@ -13,12 +13,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
-/**
- * @ClassName : CustomAuthenticationFilter
- * @Description : 自定义security过滤器，以实现用post发起登录请求时，参数用json传递
- * @Author : CJH
- * @Date: 2020-08-31 22:18
- */
 public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
